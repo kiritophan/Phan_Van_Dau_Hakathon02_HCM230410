@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /* -------------------------------------Bai 1--------------------------------------- */
+        /* Bai 1: gop mang va sap xep mang */
+        /* let list1 = [1, 2, 4];
+        let list2 = [1, 3, 4];
+
+        let list3 = list1.concat(list2);
+
+        for (let i = 0; i < list3.length - 1; i++) { //a.length  =>> 4
+            for (let j = i; j < list3.length; j++) {
+                if (list3[j] > list3[j + 1]) {
+                    let temp = list3[j];
+                    list3[j] = list3[j + 1];
+                    list3[j + 1] = temp;
+                }
+            }
+        }
+        console.log(list3); */
+
+        /* -------------------------------------Bai 2--------------------------------------- */
+        
+        /* let nums = [2, 7, 11, 15];
+        let target = 9;
+        let result = [];
+
+        function search(nums, target) {
+            for (let i = 0; i < nums.length; i++) {
+                for (let j = i + 1; j < nums.length; j++) {
+                    if (nums[i] + nums[j] === target) {
+                        result.push([i, j]);
+                    }
+                }
+            }
+        }
+        search(nums, target);
+        if (result.length === 0) {
+            console.log("Khong thoa man");
+        } else {
+            console.log(result);
+        }
+         */
+
+        /* -------------------------------------Bai 3--------------------------------------- */
+
+        //output: fl
+        // let arr = ["dog", "racecar", "oto"];    //"" không có tiền tố nào chung cả
+        let str1 = ["flower", "flow", "flight"];
+
+        function find(strs) {
+            let result = "";
+            if (strs.length === 0) {
+                return "";
+            }
+            let str2 = strs[0];
+            for (let i = 1; i < strs.length; i++) {
+                let temp = strs[i];
+                let j = 0;
+                while (j < str2.length && j < temp.length && str2[j] === temp[j]) {
+                    j++;
+                }
+                str2 = str2.substring(0, j);
+                if (str2 === "") {
+                    console.log("Khong giong nhau");
+                    return "";
+                }
+            }
+            return console.log(str2); 
+        }
+        find(str1);
+        
+         /* -------------------------------------------------------------------------------- */
+
+    </script>
+</body>
+
+</html>
